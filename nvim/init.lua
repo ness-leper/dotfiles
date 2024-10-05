@@ -28,5 +28,14 @@ vim.keymap.set("n", "<C-l>", ":wincmd l <CR>", {})
 
 vim.keymap.set("n", "<leader>qq", ":bd <CR>", {})
 
-
 require("config.lazy")
+local telescope = require('telescope')
+
+telescope.setup({
+  defaults = {
+    layout_strategy = 'bottom_pane',
+    layout_config = {
+      bottom_pane = { height = 0.25 } -- Adjust the height as needed
+    }
+  }
+})
