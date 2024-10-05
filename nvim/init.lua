@@ -35,7 +35,7 @@ telescope.setup({
   defaults = {
     layout_strategy = 'bottom_pane',
     layout_config = {
-      bottom_pane = { height = 0.25 } -- Adjust the height as needed
+      bottom_pane = { height = 0.45 } -- Adjust the height as needed
     }
   }
 })
