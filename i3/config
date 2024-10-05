@@ -34,7 +34,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec /home/nessleper/.config/nl_scripts/pod.sh
+exec ./pod.sh
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
@@ -182,4 +182,4 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id polybar
-exec --no-startup-id bash /home/ness-leper/.config/nl_scripts/remap.sh
+exec --no-startup-id bash ./remap.sh
