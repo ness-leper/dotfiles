@@ -5,6 +5,7 @@ Build a bash script that does the following:
 - install alacritty
 - install sway / i3
     - install polybar / swaybar
+    - install swaylock / xsslock?
 - symlink nvim, alacritty, WM & Bar
 - Install oh-my-posh, setup the view
 - symlink over the tmux config
