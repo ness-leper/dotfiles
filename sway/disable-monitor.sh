@@ -2,15 +2,18 @@
 
 export SWAYSOCK=$XDG_RUNTIME_DIR/sway-ipc.$UID.$(pgrep -x sway).sock
 
+count=2
+disableInternal=false
+while [[ $count -lt 10 ]]; do
+  external_monitor=$(swaymsg -t get_outputs | grep "DP-$count")
+  if [ ! -z "${external_monitor}" ]; then
+    disableInternal=true
+  fi
+  let count++
+done
 
-external_monitor=$(swaymsg -t get_outputs | grep DP-5)
-
-if [ ! -z "${external_monitor}" ]; then
+if [[ $disableInternal == true ]]; then
   swaymsg output eDP-1 disable
-fi
-
-external_monitor=$(swaymsg -t get_outputs | grep DP-2)
-
-if [ ! -z "${external_monitor}" ]; then
-  swaymsg output eDP-1 disable
+else
+  swaymsg output eDP-1 enable
 fi
