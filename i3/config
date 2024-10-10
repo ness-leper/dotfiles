@@ -60,7 +60,6 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show run
 
-bindsym Ctrl+Shit+w exec /home/nessleper/.config/nl_scripts/pod.sh
 exec --no-startup-id setxkbmap -layout us -option caps:escape
 
 # A more modern dmenu replacement is rofi:
@@ -183,3 +182,4 @@ bindsym $mod+r mode "resize"
 
 exec --no-startup-id polybar
 exec --no-startup-id bash ./remap.sh
+exec dunst
