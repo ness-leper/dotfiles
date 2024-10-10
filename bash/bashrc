@@ -2,7 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-eval "$(oh-my-posh --config "/home/nmonforte/.config/ohmyposh/json.omp.json" init bash)"
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -93,6 +92,8 @@ alias ll='eza -lF --icons'
 alias la='eza -A --icons'
 alias l='eza -CF --icons'
 
+alias nvim='/opt/nvim/nvim.appimage'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -121,3 +122,5 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(oh-my-posh --config "/home/nmonforte/.config/ohmyposh/json.omp.json" init bash)"
