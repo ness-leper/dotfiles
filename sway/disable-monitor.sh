@@ -8,3 +8,9 @@ external_monitor=$(swaymsg -t get_outputs | grep DP-5)
 if [ ! -z "${external_monitor}" ]; then
   swaymsg output eDP-1 disable
 fi
+
+external_monitor=$(swaymsg -t get_outputs | grep DP-2)
+
+if [ ! -z "${external_monitor}" ]; then
+  swaymsg output eDP-1 disable
+fi
