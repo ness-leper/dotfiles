@@ -2,7 +2,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.relativenumber = true
+vim.opt.number = true
 
 vim.opt.scrolloff = 10
 
@@ -51,12 +51,6 @@ autocmd('TextYankPost', {
         })
     end,
 })
-
-vim.keymap.set("n", "<leader>e", "<cmd>e ./<cr>", {})
-
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
 
 vim.cmd [[
   highlight Normal guibg=none
