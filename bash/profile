@@ -30,4 +30,5 @@ bash /opt/scripts/edgecert.sh
 . "$HOME/.cargo/env"
 
 TZ='America/Toronto'; export TZ
-eval "$(oh-my-posh --config "/home/nmonforte/.config/ohmyposh/json.omp.json" init bash)"
+# eval "$(oh-my-posh --config "/home/nmonforte/.config/ohmyposh/json.omp.json" init bash)"
+eval "$(oh-my-posh --config "$HOME/.config/ohmyposh/json.omp.json" init bash)"
