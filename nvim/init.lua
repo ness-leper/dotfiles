@@ -9,7 +9,6 @@ vim.opt.scrolloff = 10
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.keymap.set("i", "jj", "<Esc>", {})
 
 vim.keymap.set("i", "<C-h>", "<Left>", {})
 vim.keymap.set("i", "<C-j>", "<Down>", {})
