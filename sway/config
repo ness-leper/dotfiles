@@ -228,16 +228,14 @@ bindsym $mod+Shift+Return exec nautilus
 
 bindsym $mod+Shift+o exec ~/.config/sway/disable-monitor.sh
 bindsym $mod+Shift+w exec ~/.config/sway/set-wallpaper.sh
+bindsym $mod+Shift+p exec dunstctl close-all
 
 ## Screenshots
-bindsym Ctrl+Shift+Print exec ~/.config/sway/screenshot.sh 
+bindsym Ctrl+Shift+s exec ~/.config/sway/screenshot.sh 
 include /etc/sway/config.d/*
 
 # Notification Daemon
 exec dunst
-
-# Toggle control center
-bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # Keymapping
 input type:keyboard {
