@@ -1,4 +1,4 @@
-local installedLSPs = { "lua_ls", "ts_ls", "gopls" }
+local installedLSPs = { "lua_ls", "ts_ls", "pyright", "gopls", "intelephense", "tailwindcss" }
 
 return {
 	{
@@ -19,7 +19,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 			for _, value in ipairs(installedLSPs) do
 				lspconfig[value].setup({ capabilities = capabilities })
