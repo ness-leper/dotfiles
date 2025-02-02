@@ -27,6 +27,7 @@ vim.keymap.set("n", "<C-j>", ":wincmd j <CR>", {})
 vim.keymap.set("n", "<C-l>", ":wincmd l <CR>", {})
 
 vim.keymap.set("n", "<leader>qq", ":bd <CR>", {})
+vim.keymap.set("n", "<leader>w", ":w <CR>", {})
 
 require("config.lazy")
 local telescope = require('telescope')
