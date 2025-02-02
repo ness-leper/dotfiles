@@ -2,3 +2,4 @@ font-family = "JetBrains Mono"
 font-size = 14
 command = "tmux"
 theme=GruvboxDark
+window-decoration=false
