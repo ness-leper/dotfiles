@@ -2,7 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-eval "$(oh-my-posh --config "/home/nmonforte/.config/ohmyposh/dracula.omp.json" init bash)"
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -121,5 +120,11 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux
+# for ((i = 0; i < 10; i++)); do
+#   echo "$i"
+# done
 
 eval "$(starship init bash)"
