@@ -1,8 +1,8 @@
 return {
-  "dracula/vim",
-  name="dracula",
+  "ellisonleao/gruvbox",
+  name="gruvbox",
   priority=1000,
   config = function()
-    vim.cmd.colorscheme "dracula"
+    vim.cmd.colorscheme "gruvbox"
   end
 }
