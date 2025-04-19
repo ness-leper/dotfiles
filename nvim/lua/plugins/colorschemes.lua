@@ -1,5 +1,5 @@
 return {
-  "ellisonleao/gruvbox",
+  "ellisonleao/gruvbox.nvim",
   name="gruvbox",
   priority=1000,
   config = function()
