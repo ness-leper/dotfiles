@@ -1,4 +1,4 @@
-local installedLSPs = { "lua_ls", "ts_ls", "gopls" }
+local installedLSPs = { "lua_ls", "gopls" }
 
 return {
 	{
