@@ -190,6 +190,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 exec --no-startup-id "setxkbmap -option caps:escape"
 
+exec --no-startup-id bash ./pod.sh
+
 exec --no-startup-id polybar
 exec --no-startup-id bash ./remap.sh
 exec dunst
