@@ -1,0 +1,12 @@
+configuration {
+    modi: "window,run";
+    font: "MesloLGS Nerd Font Mono 14";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-window: "󰖯   ";
+    display-run: "󰌴   ";
+    display-ssh: "󰊰   ";
+    terminal: "ghostty";
+}
+
+@theme "/usr/share/rofi/themes/Paper.rasi"
