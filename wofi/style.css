@@ -1,0 +1,44 @@
+#window {
+    /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Full height */
+    height: 100%;
+    /* Positioning to the left is primarily controlled by the 'location'
+       option in your wofi config file (e.g., location=left).
+       CSS mainly handles appearance *at* that location. */
+    /* You might add some margin from the left edge if needed, e.g.: */
+    /* margin-left: 10px; */
+  font-family: "MesloLGS Nerd Font Mono", "Roboto", "Noto Sans", sans-serif
+}
+
+#input {
+    /* White text color for the input box */
+    color: #ffffff;
+    /* Black background for the input box (can adjust transparency if desired) */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Font size for the input box */
+    font-size: 14px;
+    /* Add some padding */
+    padding: 5px;
+    /* Remove default border */
+    border: none;
+}
+
+#entry {
+    /* White text color for the entries */
+    color: #ffffff;
+    /* Font size for the entries */
+    font-size: 24px;
+    /* Add some padding */
+    padding: 5px;
+}
+
+#entry:selected {
+    /* Styling for the selected entry */
+    background-color: rgba(70, 70, 70, 0.5); /* Slightly lighter semi-transparent gray */
+}
+
+/* Optional: Style for the text within entries if needed */
+#text {
+    color: #ffffff;
+}
