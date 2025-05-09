@@ -5,3 +5,7 @@ mouse-scroll-multiplier=1.0
 window-decoration=none
 
 theme="GruvboxDark"
+
+command=/home/nessleper/.config/ghostty/attach_tmux.sh
+
+background-opacity=0.8
