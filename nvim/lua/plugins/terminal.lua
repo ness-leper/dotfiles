@@ -4,8 +4,10 @@ return {
     require("FTerm").setup({
       border = "single",
       dimensions = {
-        height = 0.7,
-        width = 0.7,
+        height = 0.4,
+        width = 1,
+        x = 0,
+        y = 1
       },
     })
 
