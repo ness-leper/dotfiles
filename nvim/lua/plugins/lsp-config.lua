@@ -1,4 +1,4 @@
-local installedLSPs = { "lua_ls", "gopls" }
+local installedLSPs = { "lua_ls", "gopls", "html", "superhtml", "templ" }
 
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o> if you're not using nvim-cmp/etc.
