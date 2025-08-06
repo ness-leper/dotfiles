@@ -12,8 +12,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>qq", ":bd <CR>", {})
 vim.keymap.set("n", "<leader>w", ":w <CR>", {})
 
-vim.keymap.set("n", "<leader>e", ":e ./ <CR>", {})
-
 vim.opt.clipboard = "unnamedplus"
 
 require("config.lazy")
