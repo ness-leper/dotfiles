@@ -3,6 +3,7 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.number = true
+vim.opt.relativenumber = true
 
 vim.g.mapleader = " "
 
@@ -28,13 +29,12 @@ telescope.setup({
 
 local autocmd = vim.api.nvim_create_autocmd
 autocmd('TextYankPost', {
-    group = yank_group,
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = 100,
-        })
-    end,
+  group = yank_group,
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = 'IncSearch',
+      timeout = 100,
+    })
+  end,
 })
-
