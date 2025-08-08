@@ -22,16 +22,22 @@ hydrate() {
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    # If someone wants to make this extensible, i'll accept
-    # PR
-    selected=$(find ~/code -mindepth 1 -maxdepth 1 -type d | fzf)
+    options=$(find ~/code -mindepth 1 -maxdepth 1 -type d)
+    tmuxsessions=$(tmux list-sessions -F '[TMUX] #{session_name}')
+    selected=$(printf "%s\n%s\n" "$tmuxsessions" "$options" | fzf)
 fi
 
 if [[ -z $selected ]]; then
     exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
+if [[ "$selected" == "[TMUX]"* ]]; then
+    selected_name="${selected#"[TMUX] "}"
+    selected="$selected_name"
+else
+    selected_name=$(basename "$selected" | tr . _)
+fi
+
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
