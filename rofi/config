@@ -1,12 +1,113 @@
-configuration {
-    modi: "window,run";
-    font: "MesloLGS Nerd Font Mono 14";
-    show-icons: true;
-    icon-theme: "Papirus";
-    display-window: "󰖯   ";
-    display-run: "󰌴   ";
-    display-ssh: "󰊰   ";
-    terminal: "ghostty";
+/*
+ * Rofi Nord Theme - V2
+ *
+ * This version of the Nord theme provides a more layered and visually distinct
+ * interface for Rofi. It uses subtle shading and borders to separate the
+ * different components like the input bar and the list of applications.
+ *
+ * Save this file as ~/.config/rofi/nord.rasi and apply it in your main Rofi config.
+ */
+
+/* Nord Colors */
+* {
+    nord-background:    #2e3440;  /* Polar Night, darkest */
+    nord-light-bg:      #3b4252;  /* Polar Night, lighter */
+    nord-foreground:    #d8dee9;  /* Snow Storm, lightest */
+    nord-primary:       #88c0d0;  /* Frost, arctic blue */
+    nord-secondary:     #5e81ac;  /* Frost, bluish-purple */
+    nord-alert:         #bf616a;  /* Aurora, red */
+    nord-orange:        #d08770;
 }
 
-@theme "/usr/share/rofi/themes/Paper.rasi"
+window {
+    background-color: @nord-light-bg;
+    border:           2px;
+    border-color:     @nord-primary;
+    padding:          10px;
+    width:            35%; /* Increased width slightly for better text visibility */
+    border-radius:    10px;
+}
+
+mainbox {
+    background-color: @nord-light-bg;
+    children:         [ inputbar, listview ];
+    spacing:          10px;
+    padding:          5px;
+}
+
+inputbar {
+    background-color: @nord-light-bg;
+    text-color:       @nord-foreground;
+    spacing:          0;
+    padding:          8px;
+    border-radius:    8px;
+    border:           1px;
+    border-color:     @nord-secondary;
+}
+
+prompt {
+    background-color: @nord-light-bg;
+    text-color:       @nord-primary;
+    padding:          0px 8px 0px 0px;
+}
+
+textbox {
+    text-color: @nord-foreground;
+    background-color: @nord-light-bg;
+}
+
+listview {
+    background-color: @nord-light-bg;
+    spacing:          5px;
+    padding:          5px;
+    dynamic:          false;
+}
+
+element {
+    background-color: @nord-background;
+    text-color:       @nord-foreground;
+    padding:          8px;
+    border-radius:    6px;
+    border:           1px;
+    border-color:     @nord-background; /* A subtle border to give depth */
+}
+
+element selected {
+    background-color: @nord-primary;
+    text-color:       @nord-background;
+    border:           1px;
+    border-color:     @nord-foreground; /* A clear border to highlight the selection */
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element-icon {
+    size: 1.2em; /* Slightly larger icons for better visibility */
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+/* Scrollbar styling */
+scrollbar {
+    background-color: @nord-light-bg;
+    handle-color:     @nord-secondary;
+    border-radius:    4px;
+    width:            4px;
+}
+
+/* Urgent and active states */
+element urgent {
+    background-color: @nord-alert;
+    text-color:       @nord-background;
+}
+
+element active {
+    background-color: @nord-secondary;
+    text-color:       @nord-foreground;
+}
+
